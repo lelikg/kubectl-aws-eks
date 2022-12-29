@@ -2,6 +2,13 @@
 
 This action provides `kubectl` for Github Actions.
 
+## Modified from the original
+
+The original can be found at https://github.com/kodermax/kubectl-aws-eks but
+contains an issue around Github API rate limiting. This version attempts to
+work around that by storing a recent copy of the rate limited file in the
+repository which can be used to fallback when rate limiting kicks in.
+
 ## Usage
 
 `.github/workflows/push.yml`
