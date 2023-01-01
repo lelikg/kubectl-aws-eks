@@ -1,4 +1,5 @@
 FROM amazon/aws-cli:latest
+COPY latest.json /latest.json
 RUN curl -sL -o /usr/bin/jq https://stedolan.github.io/jq/download/linux64/jq
 RUN chmod +x /usr/bin/jq
 RUN curl -sL -o /usr/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
